@@ -2,6 +2,7 @@ extern crate websocket;
 extern crate futures;
 extern crate tokio_core;
 
+use std::env;
 use std::fmt::Debug;
 
 use websocket::message::{Message, OwnedMessage};
@@ -15,7 +16,8 @@ use futures::{Future, Sink, Stream};
 fn main() {
     let mut core = Core::new().unwrap();
     let handle = core.handle();
-    let server = Server::bind("0.0.0.0:4000", &handle).unwrap();
+    let server = Server::bind
+        (("0.0.0.0", env::var("PORT").unwrap().parse::<u16>().unwrap()), &handle).unwrap();
 
     let f = server.incoming()
         .map_err(|InvalidConnection { error, .. }| error)
