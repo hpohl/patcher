@@ -1,0 +1,9 @@
+[package]
+name = "patcher"
+version = "0.1.0"
+authors = ["Henning Pohl <henning@still-hidden.de>"]
+
+[dependencies]
+futures = "*"
+websocket = "*"
+tokio-core = "*"
