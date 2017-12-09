@@ -1,1 +1,1 @@
-web: ./target/release/patcher
+web: RUST_BACKTRACE=1 ./target/release/patcher
