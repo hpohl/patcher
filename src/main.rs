@@ -20,7 +20,6 @@ fn main() {
         (("0.0.0.0", env::var("PORT").unwrap().parse::<u16>().unwrap()), &handle).unwrap();
 
     let f = server.incoming()
-        .map_err(|InvalidConnection { error, .. }| error)
         .for_each(|(upgrade, addr)| {
             println!("Got a connection from: {}", addr);
 
@@ -49,7 +48,7 @@ fn main() {
             Ok(())
         });
 
-    core.run(f).unwrap();
+    core.run(f);
 }
 
 fn spawn_future<F, I, E>(f: F, desc: &'static str, handle: &Handle)
