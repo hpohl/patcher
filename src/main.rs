@@ -15,7 +15,7 @@ use futures::{Future, Sink, Stream};
 fn main() {
     let mut core = Core::new().unwrap();
     let handle = core.handle();
-    let server = Server::bind("127.0.0.1:4000", &handle).unwrap();
+    let server = Server::bind("0.0.0.0:4000", &handle).unwrap();
 
     let f = server.incoming()
         .map_err(|InvalidConnection { error, .. }| error)
