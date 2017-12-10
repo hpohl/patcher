@@ -4,4 +4,8 @@ version = "0.1.0"
 authors = ["Henning Pohl <henning@still-hidden.de>"]
 
 [dependencies]
-ws = "*"
+futures = "*"
+tokio-core = "*"
+tokio-tungstenite = "*"
+tungstenite = "*"
+dotenv = "*"
