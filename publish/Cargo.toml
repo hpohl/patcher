@@ -1,0 +1,10 @@
+[package]
+name = "trail_publish"
+version = "0.1.0"
+authors = ["Henning Pohl <henning@still-hidden.de>"]
+
+[dependencies]
+serde = "*"
+serde_json = "*"
+serde_derive = "*"
+uuid = { version = "*", features = ["v4", "serde"] }

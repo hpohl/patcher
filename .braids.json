@@ -1,0 +1,7 @@
+{
+  "publish": {
+    "url": "git@github.com:trailgames/publish.git",
+    "branch": "master",
+    "revision": "99e5c7613a22f5f7a6481c151cf34dcee1e5fe9c"
+  }
+}
