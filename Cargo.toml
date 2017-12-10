@@ -9,3 +9,4 @@ tokio-core = "*"
 tokio-tungstenite = "*"
 tungstenite = "*"
 dotenv = "*"
+trail_publish = { path = "publish" }
